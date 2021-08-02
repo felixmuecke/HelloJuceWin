@@ -3,6 +3,7 @@
 //==============================================================================
 MainComponent::MainComponent()
 {
+    addAndMakeVisible(toggleButton);
     setSize (600, 400);
 }
 
@@ -19,6 +20,9 @@ void MainComponent::paint (juce::Graphics& g)
     g.setFont (juce::Font (42.0f));
     g.setColour (juce::Colours::red);
     g.drawText ("Hello World TESTETST!", getLocalBounds(), juce::Justification::centred, true);
+
+    toggleButton.setBounds(10, 10, 30, 30);
+
 }
 
 void MainComponent::resized()
